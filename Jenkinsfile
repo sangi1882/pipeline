@@ -6,8 +6,8 @@ pipeline {
 	}
 
 	environment {
-		M2_INSTALL = "/./home/sangi/software/apache-maven-3.6.1/bin/mvn"
-	}
+	//	M2_INSTALL = "/./home/sangi/software/apache-maven-3.6.1/bin/mvn"
+	//}
 
     stages {
 		stage('Clone-Repo') {
@@ -27,8 +27,8 @@ pipeline {
 		}
 		stage('Deployment') {
 	    	steps {
-				sh 'sshpass -p "sangi" cp target/gamutkart.war sangi@172.17.0.2:/home/sangi/software/apache-tomcat-8.5.42/webapps'
-				sh 'sshpass -p "sangi" ssh sangi@172.17.0.2 "JAVA_HOME=/home/sangi/software/jdk1.8.0_2111" "//home/sangi/software/apache-tomcat-8.5.42/bin/startup.sh"'
+				//sh 'sshpass -p "sangi" cp target/gamutkart.war sangi@172.17.0.2:/home/sangi/software/apache-tomcat-8.5.42/webapps'
+				//sh 'sshpass -p "sangi" ssh sangi@172.17.0.2 "JAVA_HOME=/home/sangi/software/jdk1.8.0_2111" "//home/sangi/software/apache-tomcat-8.5.42/bin/startup.sh"'
 	    	}
 		}
     }
