@@ -5,9 +5,9 @@ pipeline {
 		maven 'mvn3.61'
 	}
 
-//	environment {
-//		M2_INSTALL = "/./home/sangi/software/apache-maven-3.6.1/bin/mvn"
-//	}
+	environment {
+		M2_INSTALL = "/./home/sangi/software/apache-maven-3.6.1/bin/mvn"
+	}
 
     stages {
 		stage('Clone-Repo') {
